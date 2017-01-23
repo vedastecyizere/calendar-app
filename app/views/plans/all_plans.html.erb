@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th> Day </th>
+    <th> Activity</th>
+    <th> Time</th>
+  </tr>
+  <% @all_plans.each do | plan | %>
+    <tr>
+      <td>Day: <%= plan.day %></td>
+      <td>Activity: <%= plan.activity %></td>
+      
+      <td>Time: <%= plan.time %></td>
+    </tr>
+  <% end %>
+</table>
