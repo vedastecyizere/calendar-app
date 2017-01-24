@@ -25,4 +25,22 @@ class PlansController < ApplicationController
     plan = Plan.new({day: day, activity: activity, time: time})
     plan.save
   end
+
+  def edit 
+    @plan = Plan.find_by(id: params[:id])
+  end 
+
+  def update 
+    @plan = Plan.find_by(id: params[:id])
+    @plan.day = params[:day]
+    @plan.activity = params[:activity]
+    @plan.time = params[:time]
+    @plan.save
+  end 
+
+  def destroy
+    
+    
+  end
+
 end

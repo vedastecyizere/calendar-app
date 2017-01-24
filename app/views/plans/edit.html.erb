@@ -1,0 +1,17 @@
+<h1> Edit your Plan</h1>
+
+<%= form_tag "/plans/#{@plan.id}", method: :patch do %>
+  <div>
+    Day: <input type="text" name="day" value="<% @plan.day %>">
+  </div>
+  <div>
+    Activity: <input type="text" name="activity" value="<% @plan.activity %>">
+  </div>
+  <div>
+    Time: <input type="text" name="time" value="<% @plan.time %>">
+  </div>
+  <div>
+
+  <input type="submit" value="Update your Schedule"
+  </div>
+<% end %>

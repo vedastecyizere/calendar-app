@@ -3,3 +3,7 @@
 <h2><%= @plan.day %></h2>
 <h2><%= @plan.activity %></h2>
 <h2><%= @plan.time %></h2>
+
+<%= form_tag "/plans/#{@plan.id}", method: :delete do %>
+  <input type="submit" value="Delete Your Plan">
+<% end %>
